@@ -2,8 +2,8 @@
 
 function goToAuthUrl()
 {
-	$client_id = "04351bbddc89ae7daf1e";
-	$redirect_url = "http://54.245.32.80/callback.php";
+	$client_id = "xxxxxx";
+	$redirect_url = "http://localhost/callback.php";
 	if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 		/*$url = "https://github.com/oauth/authorize?client_id=". $client_id. "&rediect_url=".$redirect_url."&scope=user"; */
 		$url ="https://github.com/login/oauth/authorize?scope=user:email&client_id=". $client_id;
@@ -13,8 +13,8 @@ function goToAuthUrl()
 
 function fetchData()
 {
-	$client_id = "04351bbddc89ae7daf1e";
-	$redirect_url = "http://54.245.32.80/callback.php";
+	$client_id = "xxxx";
+	$redirect_url = "http://localhost/callback.php";
 	if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 		if(isset($_GET['code'])) {
 			$code=$_GET['code'];
@@ -22,7 +22,7 @@ function fetchData()
 			$post= http_build_query(array(
 			'client_id' => $client_id,
 			'redirect_url' => $redirect_url ,
-			'client_secret' => '2443ec90707258c6b1a8448bcaf8a5cff6c6804e',
+			'client_secret' => 'xxxxx',
 			'code' => $code
 		  ));
 		}
