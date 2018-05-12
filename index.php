@@ -6,7 +6,7 @@ require "init.php";
 }*/
 
 /* Redirect browser */
-/*header("Location: http://54.245.32.80/redir/index2.html"); */
+/*header("Location: http://localhost/redir/index2.html"); */
  
 /* Make sure that code below does not get executed when we redirect. */
 /*exit;*/
