@@ -6,7 +6,7 @@ $dotenv->load();
 function goToAuthUrl()
 {
 	$client_id = $_SERVER['CLIENT_ID'];
-	$redirect_url = "http://54.245.32.80/callback.php";
+	$redirect_url = "http://localhost/callback.php";
 	if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 		/*$url = "https://github.com/oauth/authorize?client_id=". $client_id. "&rediect_url=".$redirect_url."&scope=user"; */
 		$url ="https://github.com/login/oauth/authorize?scope=user:email&client_id=". $client_id;
@@ -17,7 +17,7 @@ function goToAuthUrl()
 function fetchData()
 {
 	$client_id = $_SERVER['CLIENT_ID'];
-	$redirect_url = "http://54.245.32.80/callback.php";
+	$redirect_url = "http://localhost/callback.php";
 	if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 		if(isset($_GET['code'])) {
 			$code=$_GET['code'];
